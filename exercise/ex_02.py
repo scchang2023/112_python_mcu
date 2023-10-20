@@ -8,4 +8,3 @@ print(f"x={x}, y={y}")
 # y = temp
 x, y = y, x
 print(f"兩個數值交換後 x={x}, y={y}")
-
