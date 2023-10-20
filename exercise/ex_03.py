@@ -1,7 +1,7 @@
 # 輸入正整數N，判斷N是否為質數。
 # 輸入正整數N，印出小於N的所有質數
 n = int(input("輸入正整數 N : "))
-def check_prime_num(n:int)->bool:
+def check_prime_num(n:int):
     if n <= 1:
         return False
     for i in range(2, n):
