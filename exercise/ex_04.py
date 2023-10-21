@@ -12,7 +12,9 @@ while True:
     if keyin == pwd:
         print("猜中了")
         break
-    elif keyin > target:
-        print("再小一點")
+    elif keyin > pwd:
+        max = keyin-1
+        print(f"再小一點")
     else:
-        print("再大一點")
+        min = keyin+1
+        print(f"再大一點")
