@@ -5,14 +5,14 @@
 import random
 min = 1
 max = 100
-target = random.randint(min, max)
-
+pwd = random.randint(min, max)
+# print(f"pwd = {pwd}")
 while True:
     keyin = int(input(f"猜密碼，範圍 {min}~{max} :"))
-    if keyin == target:
+    if keyin == pwd:
         print("猜中了")
         break
     elif keyin > target:
         print("再小一點")
-    elif keyin < target:
+    else:
         print("再大一點")
