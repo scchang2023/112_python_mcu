@@ -13,7 +13,6 @@ def check_prime_num(n:int):
     return is_prime
 
 def print_all_prime_num(n:int):
-    print(f"印出所有小於 {n} 的質數：")
     for i in range(n):
         if check_prime_num(i) == True:
             print(i, end=",")
@@ -23,4 +22,5 @@ if check_prime_num(n) == True:
 else:
     print(f"{n} 不是質數")
 
+print(f"印出所有小於 {n} 的質數：")
 print_all_prime_num(n)
