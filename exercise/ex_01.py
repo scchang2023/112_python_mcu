@@ -14,8 +14,7 @@ print("學生姓名：%s" % name)
 print("數學成績：%d" % Math)
 print("英語成績：%d" % Eng)
 print("總分    ：%d" % (Math+Eng))
-
-print("")
+print()
 # 使用 f-string
 print(f"學生姓名：{name}")
 print(f"數學成績：{Math}")
