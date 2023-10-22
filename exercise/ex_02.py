@@ -8,7 +8,7 @@ try:
     # y = temp
     print(f"x={x}, y={y}")
     x, y = y, x
-    print(f"兩個數值交換後 x={x}, y={y}")    
+    print(f"兩個數值交換後 x={x}, y={y}")
 except:
     print("應用程式錯誤")
 
