@@ -35,7 +35,6 @@ while True:
     print(f"電腦出：{option_list[computer_input]}")
     winner = get_winner(player_input, computer_input)
     print(f"贏家是：{winner_list[winner]}")
-    if input("繼續玩? y/n : ") == "y":
-        continue
-    else:
+    again_str = input("繼續玩? y/n : ")
+    if  again_str != "y":
         break
