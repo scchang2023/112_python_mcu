@@ -8,7 +8,11 @@ max = 100
 pwd = random.randint(min, max)
 # print(f"pwd = {pwd}")
 while True:
-    keyin = int(input(f"猜密碼，範圍 {min}~{max} :"))
+    keyin_str = input(f"猜密碼，範圍 {min}~{max} :")
+    if keyin_str.isdigit() == False:
+        print("輸入錯誤")
+        continue
+    keyin = int(keyin_str)
     if keyin == pwd:
         print("猜中了")
         break

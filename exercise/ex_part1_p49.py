@@ -1,8 +1,8 @@
 # 輸入正整數N，判斷N是否為質數。
 # 輸入正整數N，印出小於N的所有質數
-n = int(input("輸入正整數 : "))
+
 def check_prime_num(n:int):
-    is_prime = True
+    is_prime = None
     if n <= 1:
         is_prime = False
     else:
@@ -17,6 +17,11 @@ def print_all_prime_num(n:int):
         if check_prime_num(i) == True:
             print(i, end=",")
 
+keyin_str = input("輸入正整數 : ")
+if keyin_str.isdigit() == False:
+    print("輸入錯誤")
+    exit()
+n = int(keyin_str)
 if check_prime_num(n) == True:
     print(f"{n} 是質數")
 else:
