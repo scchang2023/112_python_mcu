@@ -3,22 +3,19 @@
 # 不能讓其他參與遊戲者得知。而遊戲參與者輪流猜測數字。每猜一個數，
 # 莊家就要告知遊戲者該數字是大於或小於密碼，直至密碼被猜中。(維基百科)
 import random
+import pyinputplus as pyip
 min = 1
 max = 100
 pwd = random.randint(min, max)
 # print(f"pwd = {pwd}")
 while True:
-    keyin_str = input(f"猜密碼，範圍 {min}~{max} :")
-    if keyin_str.isdigit() == False:
-        print("輸入錯誤")
-        continue
-    keyin = int(keyin_str)
-    if keyin == pwd:
+    pwd_guess = pyip.inputInt(f"猜密碼，範圍 {min}~{max}：")    
+    if pwd_guess == pwd:
         print("猜中了")
         break
-    elif keyin > pwd:
-        max = keyin-1
+    elif pwd_guess > pwd:
+        max = pwd_guess-1
         print(f"再小一點")
     else:
-        min = keyin+1
+        min = pwd_guess+1
         print(f"再大一點")
