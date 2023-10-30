@@ -9,7 +9,7 @@ max = 100
 pwd = random.randint(min, max)
 # print(f"pwd = {pwd}")
 while True:
-    pwd_guess = pyip.inputInt(f"猜密碼，範圍 {min}~{max}：")    
+    pwd_guess = pyip.inputInt(f"猜密碼，範圍 {min} ~ {max}：", min=min, max=max)    
     if pwd_guess == pwd:
         print("猜中了")
         break
