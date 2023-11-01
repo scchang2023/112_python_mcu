@@ -19,7 +19,7 @@ for i in range(n1):
     if i < 2:
         list1.append(i)
     else:
-        # num = list1[i-1] + list1[i-2]
+        # n2 = list1[i-1] + list1[i-2]
         n2 = sum(list1[i-2:i])
         list1.append(n2)
 print(f"費氏數列：{list1}")
