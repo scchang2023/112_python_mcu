@@ -15,6 +15,6 @@ dict1 = {
     "雙魚座":"敏感、浪漫、有同情心"
 }
 items = list(dict1.items())
-print(items)
+print(dict1.items(), type(dict1.items()))
 for name, personality in items:
     print(f"{name}的個性：{personality}")
