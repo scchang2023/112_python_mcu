@@ -1,13 +1,13 @@
 # 先輸入一個整數N，再以迴圈方式輸入N個數字，並將這些數字存入串列中。
 import pyinputplus as pyip
-list1 = []
-n1 = pyip.inputInt("輸入一整數：",min=0)   
-i = 0
-while i < n1:
-    n2 = pyip.inputInt(f"輸入第 {i+1} 個數字：")   
-    list1.append(n2)
-    i += 1
-print(f"輸入的串列：{list1}")
+# list1 = []
+# n1 = pyip.inputInt("輸入一整數：",min=0)   
+# i = 0
+# while i < n1:
+#     n2 = pyip.inputInt(f"輸入第 {i+1} 個數字：")   
+#     list1.append(n2)
+#     i += 1
+# print(f"輸入的串列：{list1}")
 
 # 輸入一個整數N，將N項的費氏數列存到串列中。
 # 所謂費波那契數列，是指在一串數字中，每一項是前兩項的和。
@@ -19,7 +19,5 @@ for i in range(n1):
     if i < 2:
         list1.append(i)
     else:
-        # n2 = list1[i-1] + list1[i-2]
-        n2 = sum(list1[i-2:i])
-        list1.append(n2)
+        list1.append(list1[-1]+list1[-2])
 print(f"費氏數列：{list1}")
