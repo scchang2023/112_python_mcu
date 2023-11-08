@@ -21,7 +21,7 @@ def get_winner(player:int, computer:int)->int:
 
 list_options = ["剪刀", "石頭", "布"]
 list_winners = ["平手", "玩家", "電腦"]
-
+win_counts = [0,0,0]
 while True:
     n1 = pyip.inputInt("請輸入 [0]剪刀 [1]石頭 [2]布 : ",min=0, max=2) 
     n2 = r.randint(0, 2)
@@ -29,6 +29,8 @@ while True:
     print(f"電腦出：{list_options[n2]}")
     winner = get_winner(n1, n2)
     print(f"贏家是：{list_winners[winner]}")
+    win_counts[winner]+=1
+    print(win_counts)
     play_again = pyip.inputYesNo("繼續玩(y/n)？")
     print(play_again)
     if play_again == "no":
